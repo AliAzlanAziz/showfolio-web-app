@@ -18,7 +18,7 @@ const DownloadApp = () => {
                             <div className="text-center text-xxl-start">
                                 <a href="#" target="_blank" className="market-btn google-btn" role="button">
                                     <span className="market-button-subtitle">Download on the</span>
-                                    <span className="market-button-title">Google Play</span>
+                                    <span className="market-button-title">Google Play (Under Review By Google)</span>
                                 </a>
                             </div>
                         </div>
