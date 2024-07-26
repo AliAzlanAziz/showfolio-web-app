@@ -11,7 +11,9 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
       <div className="container px-5">
         <span className="navbar-brand">
-          <span className="fw-bolder text-primary">Showfolio</span>
+          <a href="/" target="_blank" style={{textDecoration: 'none'}}>
+            <span className="fw-bolder text-primary">Showfolio</span>
+          </a>
         </span>
         <button
           className="navbar-toggler"
@@ -28,10 +30,10 @@ const Header = () => {
 
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
             <li className="nav-item">
-              <span className="text-primary">
-                highlight your presence</span>
+              <a href="/" target="_blank" style={{textDecoration: 'none'}}>
+                <span className="text-primary">highlight your presence</span>
+              </a> 
             </li>
-
           </ul>
         </div>
         {/* {pathname !== "/" && !pathname.includes("/home") ? (

@@ -9353,6 +9353,11 @@ fieldset:disabled .btn {
   --bs-bg-opacity: 1;
 }
 
+.bg-theme-light-purple {
+  --bs-bg-opacity: 1;
+  background-color: #dfc9ed !important;
+}
+
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
 }
