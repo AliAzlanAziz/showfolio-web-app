@@ -11,7 +11,7 @@ export const getUserProfile = (username) => async (dispatch) => {
                 Authorization: "Token ]=q;d-4o3r-04o]-SGHA*(QYH(T#*fw#:#$POj;soc.3wf-04DAJ"
             }
         }
-        const { data } = await axios.get(`https://snow-spoonbill-302508.hostingersite.com/user/username/${username}`, config);
+        const { data } = await axios.get(`http://89.116.110.136:3000/user/username/${username}`, config);
       
         dispatch({
             type: "GET_PROFILE_SUCCESS",
