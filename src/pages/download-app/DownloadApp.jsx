@@ -22,10 +22,10 @@ const DownloadApp = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-xxl-6 shadow-lg">
+                        <div className="col-xxl-6">
 
                             <div className="text-center ">
-                                <img src='../../../public/logo.png' />
+                                <img src='../../../public/logo.png' className='custom-shadow' />
                             </div>
 
                         </div>
