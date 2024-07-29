@@ -6,7 +6,7 @@ const DownloadApp = () => {
             <header className="py-5 header-section">
                 <div className="container px-5 pb-5">
                     <div className="row gx-5 align-items-center">
-                        <div className="col-xxl-5">
+                        <div className="col-xxl-6">
 
                             <div className="text-center text-xxl-start">
                                 <h1 className="display-3 fw-bolder mb-3"><span className="text-gradient d-inline">Showfolio</span></h1>
@@ -21,6 +21,13 @@ const DownloadApp = () => {
                                     <span className="market-button-title">Google Play</span>
                                 </a>
                             </div>
+                        </div>
+                        <div className="col-xxl-6">
+
+                            <div className="text-center ">
+                                <img src='../../../public/logo.png' />
+                            </div>
+
                         </div>
 
                     </div>

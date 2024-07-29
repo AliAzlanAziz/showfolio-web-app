@@ -3,15 +3,29 @@ import Resume from "../resume/Resume"
 import HeroSection from "./hero-section/HeroSection"
 import { useDispatch } from "react-redux";
 import { getUserProfile } from "../../service/portfolio/portfolio-service";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const Home = () => {
     const dispatch = useDispatch();
     const { username } = useParams();
+    const navigate = useNavigate();
+
 
     useEffect(() => {
-        dispatch(getUserProfile(username))
-    }, [])
+        const fetchUserProfile = async () => {
+            try {
+                await dispatch(getUserProfile(username));
+            } catch (error) {
+                if (error?.response?.status === 400) {
+                    navigate('/user-not-found');
+                }
+                console.error( error);
+            }
+        };
+
+        fetchUserProfile();
+    }, [dispatch]);
+ 
 
     return (
         <div>

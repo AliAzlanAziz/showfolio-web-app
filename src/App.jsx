@@ -6,9 +6,10 @@ import DownloadApp from './pages/download-app/DownloadApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './assets/css/styles.css'
-import { useRef } from 'react';
+import { useEffect } from 'react';
 import { HashLoader } from 'react-spinners';
 import { useSelector } from 'react-redux';
+import UserNotFound from './pages/user-not-found/UserNotFound';
 const override = {
   display: "block",
   margin: "0 auto",
@@ -16,13 +17,21 @@ const override = {
 
 };
 function App() {
-  const homeRef = useRef(null);
   const { loading } = useSelector(
     (state) => state.profileState
   );
-  const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Clean up the effect when the component is unmounted or loading changes
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [loading]);
   return (
     <>
       {
@@ -39,11 +48,13 @@ function App() {
       <div className='main-wrapper'>
 
         <div>
-          <Header className="header-section" scrollToSection={scrollToSection} refs={{ homeRef }} />
+          <Header className="header-section" />
           <Routes>
             <Route path="/" element={<DownloadApp />} />
             <Route path="/home" element={<DownloadApp />} />
-            <Route path="/portfolio/:username" element={<Home ref={homeRef} />} />
+            <Route path="/portfolio/:username" element={<Home/>} />
+            <Route path="/user-not-found" element={<UserNotFound/>} />
+
             </Routes>
         </div>
         <Footer />
