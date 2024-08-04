@@ -12,20 +12,18 @@ const Home = () => {
 
 
     useEffect(() => {
-        const fetchUserProfile = async () => {
-            try {
-                await dispatch(getUserProfile(username));
-            } catch (error) {
-                if (error?.response?.status === 400) {
-                    navigate('/user-not-found');
-                }
-                console.error( error);
-            }
-        };
-
         fetchUserProfile();
     }, [dispatch]);
  
+    const fetchUserProfile = async () => {
+        try {
+            await dispatch(getUserProfile(username));
+        } catch (error) {
+            if (error?.response?.status === 400 || error?.response?.status === 404) {
+                navigate('/user-not-found', { state: { errorStatusCode:error?.response?.status} });
+            }
+        }
+    };
 
     return (
         <div>

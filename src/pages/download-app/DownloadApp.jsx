@@ -5,12 +5,13 @@ const DownloadApp = () => {
 
             <header className="py-5 header-section">
                 <div className="container px-5 pb-5">
-                    <div className="row gx-5 align-items-center">
-                        <div className="col-xxl-6">
+                    <div className="row gx-5 align-items-center custom-card ">
+                        <div className="col-xxl-6  mt-4 mt-lg-0">
 
                             <div className="text-center text-xxl-start">
                                 <h1 className="display-3 fw-bolder mb-3"><span className="text-gradient d-inline">Showfolio</span></h1>
-                                <div className="fs-3 fw-light text-muted mb-3">Make your portfolio and share with others</div>
+                                <div className="fs-3 fw-light text-mute mb-1">Building portfolio has never been this easier!</div>
+                                <div className="fs-3 fw-light text-mute mb-3">Make your portfolio and share with others</div>
                                 <div className="badge bg-gradient-primary-to-secondary text-white mb-4">
                                     <div className="text-uppercase">highlight you presence</div></div>
 
@@ -22,7 +23,7 @@ const DownloadApp = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-xxl-6">
+                        <div className="col-xxl-6 mt-4 mt-lg-0">
 
                             <div className="text-center ">
                                 <img src='../../../public/logo.png' className='custom-shadow' />

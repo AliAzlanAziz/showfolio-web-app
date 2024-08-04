@@ -23,7 +23,8 @@ export const getUserProfile = (username) => async (dispatch) => {
     } catch (error) {
          dispatch({
             type: "GET_PROFILE_FAILURE",
-            payload: 'Something went wrong',
+            payload: error?.response,
         });
+        throw error;
     }
 };
