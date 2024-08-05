@@ -42,7 +42,7 @@
     filter: drop-shadow(30px 10px 4px #5709886c);
 }
 
-.header-section {
+/* .header-section {
     background-image: url('../../../public/pexels-tranmautritam-326503.jpg');
     background-size: cover;
     -webkit-animation: slidein 100s;
@@ -81,7 +81,7 @@
         background-size: 2750px;
     }
 
-}
+} */
 
 .custom-card{
     padding: 2rem 0rem;
